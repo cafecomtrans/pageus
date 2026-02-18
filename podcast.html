@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café com Trans - Ouvir Podcast</title>
+  <style>
+    /* Reset básico */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        display: flex;
+        min-height: 100vh;
+        background-color: #f8f9ff;
+        color: #333;
+    }
+
+    /* Menu lateral */
+    .sidebar {
+        width: 220px;
+        background-color: #fff;
+        border-right: 1px solid #e0e0e0;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sidebar h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .nav {
+        list-style: none;
+        margin-bottom: 30px;
+    }
+
+    .nav li {
+        margin-bottom: 15px;
+    }
+
+    .nav li a {
+        text-decoration: none;
+        color: #555;
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: background 0.3s;
+    }
+
+    .nav li a.active, .nav li a:hover {
+        background: linear-gradient(90deg, #6c63ff, #ff4da6);
+        color: #fff;
+    }
+
+    .about {
+        font-size: 14px;
+        color: #666;
+        background: #f1f1ff;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    /* Conteúdo principal */
+    .main {
+        flex: 1;
+        padding: 40px;
+        overflow-y: auto;
+    }
+
+    .main h1 {
+        font-size: 32px;
+        color: #6c63ff;
+        margin-bottom: 10px;
+    }
+
+    .main p {
+        font-size: 16px;
+        margin-bottom: 30px;
+        color: #555;
+    }
+
+    /* Estrutura de Duas Colunas (Ícones + Imagem) */
+    .podcast-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+
+    .podcast-content-left {
+        flex: 1;
+    }
+
+    .podcast-sidebar-right {
+        flex: 0 0 320px; /* Largura da imagem lateral */
+    }
+
+    .podcast-sidebar-right img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    /* Grid de Ícones das Plataformas */
+    .podcast-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 15px;
+    }
+
+    .podcast-grid img {
+        width: 44px;
+        height: 44px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .podcast-grid img:hover {
+        transform: scale(1.15);
+        box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+    }
+
+    .podcast-player iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 180px;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
+
+    /* Responsividade para Celular */
+    @media (max-width: 900px) {
+        .podcast-container {
+            flex-direction: column-reverse; /* Imagem vai para cima ou baixo dependendo da escolha */
+            align-items: center;
+        }
+        .podcast-sidebar-right {
+            flex: none;
+            width: 100%;
+            max-width: 350px;
+            margin-bottom: 30px;
+        }
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Café com Trans</h2>
+    <ul class="nav">
+           <li><a href="index.html">Inicio</a></li>  
+           <li><a href="podcast.html" class="active">Ouvir Podcast</a></li>
+           <li><a href="noticias.html">Notícias</a></li>
+           <li><a href="comunidade.html" >Comunidade</a></li>
+           <li><a href="eventos.html">Eventos</a></li>         
+           <li><a href="loja.html">Loja</a></li>  
+    </ul>
+    <div class="about">
+        Informações atualizadas e recursos para a comunidade trans no Brasil.
+    </div>
+</div>
+
+<div class="main">
+  <h1>Ouvir Podcast</h1>
+  <p>Escute os episódios mais recentes do Café com Trans e acompanhe entrevistas, debates e histórias inspiradoras.</p>
+
+  <div class="podcast-container">
+      
+      <div class="podcast-content-left">
+          <h3 style="color: #555; margin-bottom: 10px;">LISTEN TO THIS PODCAST</h3>
+          <div class="podcast-grid">
+              <a href="https://podcasts.apple.com/..." target="_blank"><img src="images/apple.jpg" alt="Apple Podcasts"></a>
+              <a href="http://spotify.com/..." target="_blank"><img src="images/spotify.jpg" alt="Spotify"></a>
+              <a href="https://podcastaddict.com/..." target="_blank"><img src="images/podaddict.jpg" alt="Podcast Addict"></a>
+              <a href="https://ivy.fm/..." target="_blank"><img src="images/ivy.jpg" alt="Ivy FM"></a>
+              <a href="https://music.amazon.es/..." target="_blank"><img src="images/amazon.jpg" alt="Amazon Music"></a>
+              <a href="https://pocketcasts.com/..." target="_blank"><img src="images/pocketcasts.jpg" alt="Pocket Casts"></a>
+              <a href="https://goodpods.app.link/..." target="_blank"><img src="images/goodpods.jpg" alt="Goodpods"></a>
+              <a href="https://castbox.fm/..." target="_blank"><img src="images/castbox.jpg" alt="CastBox"></a>
+              <a href="https://music.youtube.com/..." target="_blank"><img src="images/youtube-music.jpg" alt="YouTube Music"></a>
+              <a href="https://anchor.fm/..." target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1080/1*sIouhcf1APOHW_W2tj5lmg.jpeg" alt="RSS Feed"></a>
+              <a href="https://www.podbean.com/..." target="_blank"><img src="images/podbean.jpg" alt="Podbean"></a>
+              <a href="https://podcastrepublic.net/..." target="_blank"><img src="images/podcastrepublic.jpg" alt="Podcast Republic"></a>
+              <a href="https://www.deezer.com/..." target="_blank"><img src="images/deezer.jpg" alt="Deezer"></a>
+              <a href="https://www.iheart.com/..." target="_blank"><img src="images/iheart.jpg" alt="iHeart Podcasts"></a>
+              <a href="https://overcast.fm/..." target="_blank"><img src="images/overcast.jpg" alt="Overcast"></a>
+              <a href="https://radiopublic.com/..." target="_blank"><img src="images/radiopublic.jpg" alt="RadioPublic"></a>
+              <a href="https://tunein.com/..." target="_blank"><img src="images/tunein.jpg" alt="TuneIn"></a>
+              <a href="https://podimo.com/..." target="_blank"><img src="images/podimo.jpg" alt="Podimo"></a>
+              <a href="https://player.fm/..." target="_blank"><img src="images/playerfm.jpg" alt="Player FM"></a>
+              <a href="https://www.podengine.ai/..." target="_blank"><img src="images/podengine.jpg" alt="Podengine"></a>
+          </div>
+      </div>
+
+      <div class="podcast-sidebar-right">
+          <img src="images/cafecomtrans.jpg" alt="Café com Trans 6 Anos">
+      </div>
+
+  </div> <div class="podcast-player">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/2..." frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.nav a').forEach(link => {
+  if (link.href === window.location.href) {
+    link.classList.add('active');
+  }
+});
+</script>
+
+</body>
+</html>
